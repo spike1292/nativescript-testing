@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "nativescript-dev-typescript": "^0.3.2",
+     "nativescript-dev-sass": "^0.1.0",
     "typescript": "^1.8.10"
   }
 }

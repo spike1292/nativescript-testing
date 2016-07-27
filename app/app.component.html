@@ -1,7 +1,23 @@
-<StackLayout>
-    <Label text="Tap the button" class="title"></Label>
-    
-    <Button text="TAP" (tap)="onTap()"></Button>
-
-    <Label [text]="message" class="message" textWrap="true"></Label>
-</StackLayout>
+<ListView
+        [items]="items"
+        class="timeline"
+        [height]="items.length * 200">
+    <template let-item="item" let-i="index" let-odd="odd" let-even="even">
+        <StackLayout
+                orientation="horizontal"
+                [custom]="item.custom"
+                [ngSwitch]="item.type"
+                [class.custom]="'true'"
+                class="timeline__item"
+                [class.odd]="odd"
+                [class.even]="even">
+            <label class="item__date" [text]="item.date"></label>
+            <StackLayout class="item__body" *ngSwitchCase="'start'">
+                <Label [text]="item.type"></Label>
+            </StackLayout>
+            <StackLayout class="item__body" *ngSwitchCase="'end'">
+                <Label [text]="item.type"></Label>
+            </StackLayout>
+        </StackLayout>
+    </template>
+</ListView>

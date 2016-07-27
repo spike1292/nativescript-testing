@@ -1,0 +1,37 @@
+.timeline {
+  color: black;
+}
+
+.timeline__item {
+  margin: 10;
+  padding: 10 0;
+  font-family: "open-sans";
+  font-size: 12;
+  text-align: center;
+
+  StackLayout {
+    padding: 10;
+  }
+
+  &[custom='true'] {
+    background-color: #ccc;
+  }
+//   &.custom {
+//     background-color: #ccc;
+//   }
+//   .custom {
+//     background-color: #ccc;
+//   }
+}
+
+.item__date {
+  background-color: blue;
+  color: white;
+  padding: 5;
+  width: 80;
+  height: 20;
+}
+
+.item__body {
+  padding-left: 100;
+}
